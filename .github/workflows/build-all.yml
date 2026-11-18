@@ -72,7 +72,9 @@ jobs:
 
   pages:
     name: Publish the installable web app (PWA) with HTTPS
-    if: github.ref == 'refs/heads/main'
+    # Runs only after you enable Pages (Settings > Pages > Source: GitHub Actions)
+    # and add a repository variable ENABLE_PAGES = true (Settings > Secrets and variables > Actions > Variables).
+    if: github.ref == 'refs/heads/main' && vars.ENABLE_PAGES == 'true'
     runs-on: ubuntu-latest
     permissions: { contents: read, pages: write, id-token: write }
     environment:
