@@ -1,0 +1,77 @@
+{
+  "name": "mh-apps-gallery",
+  "version": "2.0.0",
+  "private": true,
+  "description": "MH Apps Gallery cross-platform app connected to Blogger",
+  "main": "desktop/main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "web:serve": "npx http-server web -p 4173 -c-1",
+    "desktop:win": "electron-builder --win nsis --publish never",
+    "desktop:mac": "electron-builder --mac dmg --publish never",
+    "android:sync": "npx cap sync android",
+    "android:open": "npx cap open android",
+    "ios:sync": "npx cap sync ios",
+    "ios:open": "npx cap open ios",
+    "assets:native": "capacitor-assets generate --assetPath resources"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/core": "^7.4.3",
+    "@capacitor/ios": "^7.4.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.3",
+    "electron": "^36.4.0",
+    "electron-builder": "^26.0.12",
+    "http-server": "^14.1.1",
+    "@capacitor/assets": "^3.0.5"
+  },
+  "build": {
+    "appId": "com.mhappsgallery.app",
+    "productName": "MH Apps Gallery",
+    "directories": {
+      "output": "release",
+      "buildResources": "assets"
+    },
+    "files": [
+      "web/**/*",
+      "desktop/**/*",
+      "assets/icon.png",
+      "docs/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "MH-Apps-Gallery-Setup.exe",
+      "icon": "assets/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "license": "docs/PRIVACY-POLICY.txt"
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ],
+      "artifactName": "MH-Apps-Gallery-${arch}.dmg",
+      "category": "public.app-category.utilities"
+    }
+  },
+  "author": "MH Apps Gallery",
+  "homepage": "https://mhappsgallery.blogspot.com/"
+}

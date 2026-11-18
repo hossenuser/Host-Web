@@ -1,0 +1,36 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function isAdmin() { return signedIn() && request.auth.token.admin == true; }
+
+    match /conversations/{conversationId} {
+      allow create: if signedIn()
+        && request.resource.data.ownerUid == request.auth.uid
+        && request.resource.data.status == 'open';
+      allow read: if isAdmin() || (signedIn() && resource.data.ownerUid == request.auth.uid);
+      allow update: if isAdmin() || (signedIn()
+        && resource.data.ownerUid == request.auth.uid
+        && request.resource.data.ownerUid == resource.data.ownerUid
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['lastMessage','updatedAt']));
+      allow delete: if isAdmin();
+
+      match /messages/{messageId} {
+        function parentOwned() {
+          return get(/databases/$(database)/documents/conversations/$(conversationId)).data.ownerUid == request.auth.uid;
+        }
+        allow read: if isAdmin() || (signedIn() && parentOwned());
+        allow create: if signedIn() && (
+          isAdmin() ||
+          (parentOwned()
+            && request.resource.data.senderUid == request.auth.uid
+            && request.resource.data.senderRole == 'visitor'
+            && request.resource.data.text is string
+            && request.resource.data.text.size() > 0
+            && request.resource.data.text.size() <= 3000)
+        );
+        allow update, delete: if isAdmin();
+      }
+    }
+  }
+}

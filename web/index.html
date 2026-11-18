@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#06101d"><meta name="description" content="MH Apps Gallery — Windows, Android, iOS, macOS apps, software, games and tools.">
+  <link rel="manifest" href="manifest.webmanifest"><link rel="icon" type="image/png" href="icons/icon-192.png"><link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="MH Apps"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="styles.css"><title>MH Apps Gallery</title>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#home"><img src="logo-original.png" alt="MH Apps Gallery original logo"><span>MH APPS <b>GALLERY</b></span></a>
+<nav aria-label="Main navigation"><a href="#home">Home</a><a href="#categories">Windows</a><a href="#categories">Android</a><a href="#categories">iOS</a><a href="#categories">macOS</a><a href="#categories">Tools</a><a href="#categories">Games</a><a href="#categories">Apps</a></nav>
+<div class="actions"><span id="connectionStatus" class="connectionStatus" role="status">● Checking connection</span><button id="themeBtn" class="iconbtn" aria-label="Toggle theme">◐</button><a class="sitebtn" href="https://mhappsgallery.blogspot.com/" target="_blank" rel="noopener">Official Website ↗</a></div></header>
+<main id="home">
+<section class="hero"><div><span class="eyebrow">YOUR APPS & SOFTWARE HUB</span><h1>Discover. Explore.<br><em>Download smarter.</em></h1><p>Windows, Android, iOS and macOS apps, software, games, tools and helpful technology guides — connected to the official MH Apps Gallery website.</p>
+<div class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Search apps, software, games and tools…" aria-label="Search posts"><button id="searchBtn">Search</button></div><div class="heroLinks"><a href="#latest">Explore latest posts ↓</a><span id="contentStatus">Live content from mhappsgallery.blogspot.com</span></div>
+<div class="quickStats"><span><b id="totalPosts">—</b> posts</span><span><b>8</b> sections</span><span><b>1</b> official source</span></div></div>
+<div class="heroArt"><div class="orbit orbitA"></div><div class="orbit orbitB"></div><div class="logoGlow"></div><img class="heroLogo" src="logo-original.png" alt="Original MH Apps Gallery logo"><span class="scanline"></span></div></section>
+<section id="categories" class="section"><div class="sectionHead"><div><span class="eyebrow">BROWSE YOUR WAY</span><h2>Explore categories</h2></div><a href="https://mhappsgallery.blogspot.com/" class="textlink" target="_blank" rel="noopener">View website →</a></div><div id="categoryList" class="chips"><button class="chip active" data-cat="all">All posts</button></div><div class="platformTiles"><button data-platform="Windows">▣ <span>Windows</span></button><button data-platform="Android">◈ <span>Android</span></button><button data-platform="iOS">◉ <span>iOS</span></button><button data-platform="macOS">⌘ <span>macOS</span></button><button data-platform="Tools">⚙ <span>Tools</span></button><button data-platform="Games">🎮 <span>Games</span></button><button data-platform="Apps">▦ <span>Apps</span></button></div></section>
+<section id="trending" class="section"><div class="sectionHead"><div><span class="eyebrow">POPULAR ON THE WEBSITE</span><h2>Trending apps</h2></div><span class="muted">Featured from recent posts</span></div><div id="trendingGrid" class="postGrid"><div class="loading">Finding trending posts…</div></div></section>
+<section id="latest" class="section"><div class="sectionHead"><div><span class="eyebrow">FRESH FROM THE WEBSITE</span><h2>Latest releases</h2></div><span id="postCount" class="muted">Loading posts…</span></div><div id="postGrid" class="postGrid"><div class="loading">Loading MH Apps Gallery posts…</div></div></section>
+<section id="saved" class="section"><div class="sectionHead"><div><span class="eyebrow">YOUR COLLECTION</span><h2>Saved favourites</h2></div></div><div id="savedGrid" class="postGrid"><p class="muted">Save a post using the bookmark icon to find it here.</p></div></section>
+<section id="about" class="about"><div><span class="eyebrow">ABOUT MH APPS GALLERY</span><h2>One gallery. Every device.</h2><p>Browse app guides, official download links and setup tips for Windows, Android, iOS and macOS. We link to official or permissioned files only — no cracks or mods.</p><a class="primary" href="https://mhappsgallery.blogspot.com/" target="_blank" rel="noopener">Visit official website ↗</a></div><div class="aboutLinks"><a href="https://mhappsgallery.blogspot.com/p/about.html" target="_blank" rel="noopener">About ↗</a><a href="https://mhappsgallery.blogspot.com/p/privacy-policy.html" target="_blank" rel="noopener">Privacy policy ↗</a><a href="https://mhappsgallery.blogspot.com/p/terms.html" target="_blank" rel="noopener">Terms ↗</a><a href="https://mhappsgallery.blogspot.com/p/dmca-report.html" target="_blank" rel="noopener">DMCA / Report ↗</a><a href="https://mhappsgallery.blogspot.com/p/contact.html" target="_blank" rel="noopener">Contact ↗</a><a href="https://mhappsgallery.blogspot.com/feeds/posts/default?alt=rss" target="_blank" rel="noopener">RSS feed ↗</a></div></section>
+</main><footer><span>© <span id="year"></span> MH Apps Gallery. All rights reserved.</span><span>Android • Windows • macOS • iPhone • iPad • Web</span></footer>
+
+<!-- Universal support widget: real WhatsApp link + optional Firebase chat -->
+<div class="supportDock" aria-label="Support options">
+  <a class="waFloat" href="https://wa.me/8801540085661?text=Welcome%20to%20MH%20Apps%20Gallery%20Support%21%0A%0A%E0%A6%86%E0%A6%AA%E0%A6%A8%E0%A6%BE%E0%A6%B0%20%E0%A6%B8%E0%A6%AE%E0%A6%B8%E0%A7%8D%E0%A6%AF%E0%A6%BE%20%E0%A6%AC%E0%A6%BE%20%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B6%E0%A7%8D%E0%A6%A8%E0%A6%9F%E0%A6%BF%20%E0%A6%86%E0%A6%AE%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B0%20%E0%A6%9C%E0%A6%BE%E0%A6%A8%E0%A6%BE%E0%A6%A8%E0%A5%A4" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" title="WhatsApp Support">☏</a>
+  <button class="chatFloat" id="chatToggle" type="button" aria-label="Open live chat" aria-expanded="false">✦ <span>Live Chat</span></button>
+</div>
+<section class="chatPanel" id="chatPanel" aria-label="MH Apps Gallery live support" hidden>
+  <header class="chatHead"><div><strong>MH Apps Gallery Support</strong><small id="chatStatus">Support messaging</small></div><button id="chatClose" aria-label="Close chat">×</button></header>
+  <div class="chatWelcome">Welcome to MH Apps Gallery Support!<br>আপনার সমস্যা বা প্রশ্নটি আমাদের জানান। আমরা আপনাকে সাহায্য করতে প্রস্তুত।</div>
+  <div class="chatLog" id="chatLog" aria-live="polite"><p class="chatHint">আপনার মেসেজ লিখুন। ইন্টারনেট না থাকলে মেসেজটি ড্রাফট হিসেবে থাকবে।</p></div>
+  <form id="chatForm" class="chatForm"><textarea id="chatMessage" maxlength="3000" rows="2" placeholder="আপনার মেসেজ লিখুন..." required></textarea><button type="submit" aria-label="Send message">➤</button></form>
+  <footer class="chatFoot"><span id="chatMode">Offline draft supported</span><a href="https://wa.me/8801540085661" target="_blank" rel="noopener">WhatsApp</a></footer>
+</section>
+
+<div id="toast" role="status" aria-live="polite"></div><script src="app.js"></script><script src="install.js"></script><script type="module" src="support.js"></script>
+</body></html>

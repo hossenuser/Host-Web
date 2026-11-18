@@ -1,0 +1,16 @@
+MH APPS GALLERY – PRIVACY NOTICE
+
+This starter application loads publicly available posts from https://mhappsgallery.blogspot.com/.
+It stores only your display preferences (theme) and saved favourite post identifiers locally in
+this browser/app profile. This starter kit does not include user accounts, analytics, advertising
+SDKs, or a custom notification server.
+
+When you open a post or the official website, the destination website may process data under its
+own privacy policy. The app cannot guarantee the availability or safety of third-party download
+links; check the publisher and file before installing downloaded software.
+
+Push notifications are not active in this starter build. They require a notification provider,
+server-side credentials, a privacy notice update, and platform permission. Never place private
+server keys inside the app source.
+
+Contact: use the Contact page on https://mhappsgallery.blogspot.com/.

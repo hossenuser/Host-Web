@@ -1,0 +1,9 @@
+{
+  "appId": "com.mhappsgallery.app",
+  "appName": "MH Apps Gallery",
+  "webDir": "web",
+  "backgroundColor": "#030e1b",
+  "server": {
+    "androidScheme": "https"
+  }
+}
