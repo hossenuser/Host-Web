@@ -13,7 +13,7 @@
     "android:open": "npx cap open android",
     "ios:sync": "npx cap sync ios",
     "ios:open": "npx cap open ios",
-    "assets:native": "capacitor-assets generate --assetPath resources"
+    "assets:native": "capacitor-assets generate --android --ios --assetPath resources"
   },
   "dependencies": {
     "@capacitor/android": "^7.4.3",

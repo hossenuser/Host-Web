@@ -43,7 +43,7 @@ jobs:
       - run: npm install
       - run: npx cap add android
       - name: Generate native icons and splash from resources/
-        run: npm run assets:native || echo "Icon generation skipped - default icon will be used"
+        run: npx capacitor-assets generate --android --assetPath resources
       - run: npx cap sync android
       - name: Build debug APK
         working-directory: android
@@ -61,7 +61,7 @@ jobs:
       - run: npm install
       - run: npx cap add ios
       - name: Generate native icons and splash from resources/
-        run: npm run assets:native || echo "Icon generation skipped - default icon will be used"
+        run: npx capacitor-assets generate --ios --assetPath resources
       - run: npx cap sync ios
       - name: Compile for iOS Simulator
         run: |
